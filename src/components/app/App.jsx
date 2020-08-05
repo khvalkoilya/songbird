@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-const App = () => {
-  const btn = <button type="submit">KEK</button>
+function App() {
   return (
-    btn
-  )
+    <div className="container">
+      <p>Hello</p>
+      <Button />
+    </div>
+
+  );
 }
-export default App
+
+export default App;
