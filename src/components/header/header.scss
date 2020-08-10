@@ -1,0 +1,12 @@
+.nav__score {
+  color: $denim-color;
+  font-size: 1.2rem;
+
+  @include media-small {
+    font-size: 1.3rem;
+  }
+
+  @include media-medium {
+    font-size: 1.6rem;
+  }
+}

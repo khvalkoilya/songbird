@@ -1,13 +1,9 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import Header from '../header/Header';
 
 function App() {
   return (
-    <div className="container">
-      <p>Hello</p>
-      <Button />
-    </div>
-
+    <Header num={[5]} />
   );
 }
 

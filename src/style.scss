@@ -1,0 +1,12 @@
+@import "./base/constants";
+@import "./base/mixes";
+@import "./components/header/header.scss";
+@import "./components/currentQuestion/currentQuestion.scss";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $brown-color;
+}
+
+
+
