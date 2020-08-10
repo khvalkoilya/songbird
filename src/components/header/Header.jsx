@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import {
   Navbar, Nav, Container,
 } from 'react-bootstrap';
-import CurrentQuestion from '../currentQuestion/CurrentQuestion';
-// import logo from 'android-chrome-512x512'
+import Level from '../level/Level';
+import logo from './logo.png'
 
 const Header = ({ num }) => (
   <Container>
     <Navbar expand="true">
       <Navbar.Brand href="#">
         <img
-          src="android-chrome-512x512.png"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
+          src={logo}
+          className="d-inline-block align-top logo"
         />
       </Navbar.Brand>
       <Nav>
@@ -24,7 +22,7 @@ const Header = ({ num }) => (
         </Nav.Item>
       </Nav>
     </Navbar>
-    <CurrentQuestion />
+    <Level />
   </Container>
   // </>
 );

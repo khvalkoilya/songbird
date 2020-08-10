@@ -1,18 +1,41 @@
-.current-question {
-  display: flex;
-  justify-content: center;
-  font-weight: 700;
-  opacity: 0.7;
-  font-size: 1.1rem;
-
-  &__container {
-    background-color: red;
+.current {
+  &-image {
     border-radius: 10px;
-    margin: 0 15px;
+    width: 200px;
+    position:relative;
+    left: 50%;
+    margin-left: -100px;
+
+    @include media-medium {
+      position: static;
+      margin-left: 0;
+      width: 200px;
+    }
+
+    @include media-large {
+      // width: 280px;
+    }
+
+    @include media-extra-large {
+      // width: 330px;
+    }
   }
 
-  &__active {
-    opacity: 1;
-    text-decoration: underline;
+  &-block {
+    background-color: $blush-color;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  &-name {
+    color: $white-color;
+    font-size: 1.8rem;
+    text-align: center;
+
+    @include media-medium {
+      text-align: start;
+      margin-left: 0;
+      width: 200px;
+    }
   }
 }

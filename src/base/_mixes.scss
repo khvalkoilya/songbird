@@ -11,5 +11,5 @@
 }
 
 @mixin media-extra-large {
-  @media (min-width: $lg-screen) { @content; }
+  @media (min-width: $xl-screen) { @content; }
 }
