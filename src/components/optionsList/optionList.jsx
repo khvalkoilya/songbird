@@ -16,7 +16,7 @@ const OptionList = () => {
     <ListGroup variant="flush" className="options">
       {birds.map((item)=>(
         <ListGroup.Item key={item}>
-          <span className="options-dot options-dot-true"></span>
+          <span className="options-dot"></span>
           <span className="options-text">{item}</span>
         </ListGroup.Item>
       ))}

@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Container, Row, Col
 } from 'react-bootstrap';
-import OptionList from '../optionsList/OptionList'
+import OptionList from '../optionsList/OptionList';
+import Description from '../description/Description';
 
 const GridMenu = () => {
   return (
@@ -12,7 +13,7 @@ const GridMenu = () => {
           <OptionList />
         </Col>
         <Col xs={12} sm className="mb-3">
-          <OptionList />
+          <Description />
         </Col>
       </Row>
     </Container>

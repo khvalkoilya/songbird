@@ -1,0 +1,31 @@
+.description {
+  background-color: $blush-color;
+  border-radius: 10px;
+  color: $white-color;
+
+  &-image {
+    border-radius: 10px;
+    width: 200px;
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+
+    @include media-large {
+      position: static;
+      margin-left: 0;
+      width: 200px;
+    }
+
+  }
+
+  &-name {
+    font-size: 1.5rem;
+    background-color: $blush-color;
+  }
+
+  &-translation {
+    font-size: 0.9rem;
+    background-color: $blush-color;
+  }
+
+}
