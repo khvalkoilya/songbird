@@ -6,8 +6,8 @@ import image from '../../assets/base.jpg'
 
 const CurrentQuestion = () => {
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-between current-block">
+    <Container className="mt-3">
+      <Row className="justify-content-between current-block my-3">
         <Col xs={12} md={3} lg={2} >
           <img
             src={image}
