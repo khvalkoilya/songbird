@@ -6,7 +6,7 @@ import {
 import Level from '../level/Level';
 import logo from './logo.png'
 
-const Header = ({ num }) => (
+const Header = ({ num, currentLevel }) => (
   <Container>
     <Navbar expand="true">
       <Navbar.Brand href="#">
@@ -22,7 +22,7 @@ const Header = ({ num }) => (
         </Nav.Item>
       </Nav>
     </Navbar>
-    <Level />
+    <Level currentLevel={currentLevel} />
   </Container>
   // </>
 );
