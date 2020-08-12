@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ListGroup
+  ListGroup,
 } from 'react-bootstrap';
 
 const OptionList = () => {
@@ -11,17 +11,17 @@ const OptionList = () => {
     'Певчий дрозд',
     'Сорока',
     'Сойка',
-  ]
+  ];
   return (
     <ListGroup variant="flush" className="options">
-      {birds.map((item)=>(
+      {birds.map((item) => (
         <ListGroup.Item key={item}>
-          <span className="options-dot"></span>
+          <span className="options-dot" />
           <span className="options-text">{item}</span>
         </ListGroup.Item>
       ))}
     </ListGroup>
-  )
-}
+  );
+};
 
 export default OptionList;

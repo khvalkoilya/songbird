@@ -1,32 +1,25 @@
 import React, {useState} from 'react';
 import {
-  Container, Row, Col
+  Container,
 } from 'react-bootstrap';
-import image from '../../assets/base.jpg'
+import {getBirdsDataImage} from '../getBirdsData/getBirdsData';
+import DescriptionBase from './DescriptionBase';
+import birdsList from '../../utils/birdsList';
 
 const Description = () => {
+  const defaultDescription = <>
+    <p className="pt-3">Послушайте аудио.</p>
+    <p className="pb-3">Выберите птицу из списка.</p>
+  </>
+  const data = birdsList[0][0];
+  const description = <DescriptionBase name={data.name} translation={data.translation} image={data.image} />
+  // const [description, setDescription] = useState(defaultDescription);
+  // getBirdsDataImage('Karakara')
   return (
     <Container className="description">
-      <Row>
-        <Col xs={12} lg={6} xl={5}>
-          <img 
-            src={image}
-            className="description-image mt-3"
-          />
-        </Col>
-        <Col xs={12} lg={6} xl={7}>
-          <p className="description-name mt-2 mt-lg-3">Птичка</p>
-          <hr />
-          <p className="description-translation">Bird</p>
-          <hr />
-          <p className="description-audio">Lfrgrgrg</p>
-        </Col>
-        <Col xs={12}>
-          <p className="description-text">Птичка это очеьн акрп икнпмл мал ка нкгмакгмнкманк мнгки акнгаикн икн акнгаи к иакнгаи книа кни анки</p>
-        </Col>
-      </Row>
+      {description}
     </Container>
   )
-}
+};
 
 export default Description;

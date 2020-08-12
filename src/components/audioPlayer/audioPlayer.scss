@@ -1,0 +1,42 @@
+$rhap_theme-color: #bd4c4c !default;   // Color of all buttons and volume/progress indicators 
+$rhap_background-color: rgb(65, 58, 58) !default; // Color of the player background 
+$rhap_bar-color: #e4e4e4 !default;     // Color of volume and progress bar 
+$rhap_time-color: rgb(99, 6, 6) !default;
+.rhap_container {
+  background-color: $blush-color!important;
+  box-shadow: none!important;
+  outline: none;
+}
+
+.rhap_container .rhap{
+  &_progress {
+    &-indicator {
+      background-color: red;
+      box-shadow: none;
+    }
+
+    &-filled {
+      background-color: green;
+    }
+
+    &-container {
+      outline: none;
+    }
+  }
+
+  &_main-controls-button {
+    outline: none;
+  }
+
+  &_volume {
+    &-button, &-bar-area {
+      outline: none;
+    }
+  }
+}
+
+.rhap_container .rhap_time {
+  color: $white-color;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}

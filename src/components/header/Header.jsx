@@ -4,7 +4,7 @@ import {
   Navbar, Nav, Container,
 } from 'react-bootstrap';
 import Level from '../level/Level';
-import logo from './logo.png'
+import logo from './logo.png';
 
 const Header = ({ num, currentLevel }) => (
   <Container>
@@ -13,6 +13,7 @@ const Header = ({ num, currentLevel }) => (
         <img
           src={logo}
           className="d-inline-block align-top logo"
+          alt="logo"
         />
       </Navbar.Brand>
       <Nav>
@@ -29,6 +30,7 @@ const Header = ({ num, currentLevel }) => (
 
 Header.propTypes = {
   num: PropTypes.arrayOf(PropTypes.number),
+  currentLevel: PropTypes.number.isRequired,
 };
 
 Header.defaultProps = {
