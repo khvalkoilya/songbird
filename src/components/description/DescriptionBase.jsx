@@ -3,6 +3,7 @@ import {
   Row, Col,
 } from 'react-bootstrap';
 // import imageDefault from '../../assets/base.jpg'
+import Player from '../audioPlayer/AudioPlayer';
 
 const DescriptionBase = ({name, translation, image}) => {
   return (
@@ -19,7 +20,7 @@ const DescriptionBase = ({name, translation, image}) => {
         <hr />
         <p className="description-translation">{translation}</p>
         <hr />
-        <p className="description-audio">Lfrgrgrg</p>
+        <div className="description-audio"><Player /></div>
       </Col>
       <Col xs={12}>
         <p className="description-text">Птичка это очеьн акрп икнпмл мал ка нкгмакгмнкманк мнгки акнгаикн икн акнгаи к иакнгаи книа кни анки</p>

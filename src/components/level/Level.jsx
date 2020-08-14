@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import {
   Row, Col, Container,
 } from 'react-bootstrap';
+import {Context} from '../context/Context';
 
-const Level = ({ currentLevel }) => {
+const Level = () => {
   const typesOfBirds = [
     'Разминка',
     'Воробьиные',
@@ -13,6 +14,8 @@ const Level = ({ currentLevel }) => {
     'Хищные',
     'Морские',
   ];
+
+  const {currentLevel} = useContext(Context);
 
   return (
     <Container>
@@ -35,8 +38,8 @@ const Level = ({ currentLevel }) => {
   );
 };
 
-Level.propTypes = {
-  currentLevel: PropTypes.number.isRequired,
-};
+// Level.propTypes = {
+//   currentLevel: PropTypes.number.isRequired,
+// };
 
 export default Level;
