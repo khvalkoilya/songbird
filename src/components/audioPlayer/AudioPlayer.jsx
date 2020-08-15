@@ -1,7 +1,10 @@
 import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import imageDefault from '../../assets/base.jpg';
+import play from '../../assets/play.svg';
+import pause from '../../assets/pause.svg';
+import speaker from '../../assets/speaker.svg'
+import mute from '../../assets/mute.svg'
 
 const Player = () => (
   <AudioPlayer
@@ -9,11 +12,12 @@ const Player = () => (
     onPlay={e => console.log("onPlay")}
     showJumpControls={false}
     customAdditionalControls={[]}
-    // customIcons={{
-    //   play: imageDefault,
-    //   pause: imageDefault,
-    //   forward: imageDefault,
-    // }}
+    customIcons={{
+      play: <img src={play} className="play-button-huge" alt="play" />,
+      pause: <img src={pause} className="pause-button-huge" alt="pause" />,
+      volume: <img src={speaker} className="speaker-button-huge" alt="speaker" />,
+      volumeMute: <img src={mute} className="mute-button-huge" alt="speaker mute" />,
+    }}
   />
 );
 

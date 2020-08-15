@@ -1,5 +1,5 @@
 .next-button {
-  background-color: $pink-color;
+  background-color: $white-color;
   color: $blush-color;
   font-size: 1.3rem;
   width: 100%;
@@ -9,6 +9,7 @@
   border-radius: 10px;
   font-weight: 700;
   padding: 5px 0;
+  opacity: 0.8;
 
   &:focus {
     outline: none;

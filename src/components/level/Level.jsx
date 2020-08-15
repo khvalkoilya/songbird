@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import PropTypes from 'prop-types';
 import {
   Row, Col, Container,
 } from 'react-bootstrap';
@@ -37,9 +36,5 @@ const Level = () => {
     </Container>
   );
 };
-
-// Level.propTypes = {
-//   currentLevel: PropTypes.number.isRequired,
-// };
 
 export default Level;

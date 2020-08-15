@@ -4,11 +4,13 @@ import Header from '../header/Header';
 import CurrentQuestion from '../currentQuestion/CurrentQuestion';
 import GridMenu from '../gridMenu/GridMenu';
 import NextButton from '../nextButton/NextButton';
+import random from '../../utils/getNumberFrom1To6';
 
 function App() {
   const [currentLevel, setCurrentLevel] = useState(0);
   const [score, setScore] = useState(2);
   const [readyToChangeLevel, setReadyToChangeLevel] = useState(true);
+  const [currentNumberOfBird, setCurrentNumberOfBird] = useState(random());
 
   return (
     <Context.Provider value={{
@@ -18,15 +20,13 @@ function App() {
       setScore,
       readyToChangeLevel,
       setReadyToChangeLevel,
+      currentNumberOfBird,
+      setCurrentNumberOfBird,
     }}>
       <Header />
       <CurrentQuestion />
       <GridMenu />
       <NextButton
-        currentLevel={currentLevel}
-        setCurrentLevel={setCurrentLevel}
-        readyToChangeLevel={readyToChangeLevel}
-        setReadyToChangeLevel={setReadyToChangeLevel}
         amountOfLevels={6}
       />
     </Context.Provider>

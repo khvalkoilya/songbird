@@ -11,12 +11,12 @@ $rhap_time-color: rgb(99, 6, 6) !default;
 .rhap_container .rhap{
   &_progress {
     &-indicator {
-      background-color: red;
+      background-color: $dark-color;
       box-shadow: none;
     }
 
     &-filled {
-      background-color: green;
+      background-color: $pink-color;
     }
 
     &-container {
@@ -32,6 +32,14 @@ $rhap_time-color: rgb(99, 6, 6) !default;
     &-button, &-bar-area {
       outline: none;
     }
+
+    &-bar {
+      background: $white-color;
+    }
+
+    &-indicator {
+      background: $dark-color;
+    }
   }
 }
 
@@ -39,4 +47,16 @@ $rhap_time-color: rgb(99, 6, 6) !default;
   color: $white-color;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
+}
+
+.play-button-huge, .pause-button-huge {
+  width: 30px;
+  height: 30px;
+  margin-top: -7px;
+}
+
+.speaker-button-huge, .mute-button-huge {
+  width: 22px;
+  height: 22px;
+  margin-top: -4px;
 }

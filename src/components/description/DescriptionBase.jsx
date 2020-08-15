@@ -5,7 +5,7 @@ import {
 // import imageDefault from '../../assets/base.jpg'
 import Player from '../audioPlayer/AudioPlayer';
 
-const DescriptionBase = ({name, translation, image}) => {
+const DescriptionBase = ({name, translation, image, description}) => {
   return (
     <Row>
       <Col xs={12} lg={6} xl={5}>
@@ -23,7 +23,7 @@ const DescriptionBase = ({name, translation, image}) => {
         <div className="description-audio"><Player /></div>
       </Col>
       <Col xs={12}>
-        <p className="description-text">Птичка это очеьн акрп икнпмл мал ка нкгмакгмнкманк мнгки акнгаикн икн акнгаи к иакнгаи книа кни анки</p>
+        <p className="description-text">{description}</p>
       </Col>
     </Row>
   )

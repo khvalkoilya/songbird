@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import PropTypes from 'prop-types';
 import {
   Navbar, Nav, Container,
 } from 'react-bootstrap';
@@ -23,7 +22,7 @@ const Header = () => {
         <Nav>
           <Nav.Item className="nav__score">
             Score:
-            <span>{score}</span>
+            <span> {score}</span>
           </Nav.Item>
         </Nav>
       </Navbar>
@@ -31,15 +30,5 @@ const Header = () => {
     </Container>
   )
 }
-
-
-Header.propTypes = {
-  num: PropTypes.arrayOf(PropTypes.number),
-  currentLevel: PropTypes.number.isRequired,
-};
-
-Header.defaultProps = {
-  num: [0],
-};
 
 export default Header;
