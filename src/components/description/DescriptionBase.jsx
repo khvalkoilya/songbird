@@ -20,7 +20,7 @@ const DescriptionBase = ({name, translation, image, description}) => {
         <hr />
         <p className="description-translation">{translation}</p>
         <hr />
-        <div className="description-audio"><Player /></div>
+        <div className="description-audio"><Player isBig={false}/></div>
       </Col>
       <Col xs={12}>
         <p className="description-text">{description}</p>

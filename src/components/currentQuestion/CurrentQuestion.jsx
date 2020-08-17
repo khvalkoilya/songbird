@@ -18,7 +18,7 @@ const CurrentQuestion = () => (
       <Col xs={12} md={8} lg={9} className="my-3">
         <p className="current-name">Птичка</p>
         <hr />
-        <Player />
+        <Player isBig={true}/>
       </Col>
     </Row>
   </Container>
