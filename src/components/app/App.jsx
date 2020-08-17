@@ -8,9 +8,11 @@ import random from '../../utils/getNumberFrom1To6';
 
 function App() {
   const [currentLevel, setCurrentLevel] = useState(0);
-  const [score, setScore] = useState(2);
+  const [score, setScore] = useState(0);
   const [readyToChangeLevel, setReadyToChangeLevel] = useState(true);
-  const [currentNumberOfBird, setCurrentNumberOfBird] = useState(random());
+  const [currentNumberOfBird, setCurrentNumberOfBird] = useState(0);
+  const [trueNumberOfBird, setTrueNumberOfBird] = useState(random());
+  const [defaultDescriptionOfBird, setDefaultDescriptionOfBird] = useState(true);
 
   return (
     <Context.Provider value={{
@@ -22,6 +24,10 @@ function App() {
       setReadyToChangeLevel,
       currentNumberOfBird,
       setCurrentNumberOfBird,
+      trueNumberOfBird,
+      setTrueNumberOfBird,
+      defaultDescriptionOfBird,
+      setDefaultDescriptionOfBird,
     }}>
       <Header />
       <CurrentQuestion />
