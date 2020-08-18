@@ -17,8 +17,7 @@ const Description = () => {
   const data = birdsData[currentLevel][currentNumberOfBird];
   const description = defaultDescriptionOfBird ? 
     defaultDescription :
-    <DescriptionBase name={data.name} translation={data.species} image={data.image} description={data.description}/>
-  // const [description, setDescription] = useState(defaultDescription);
+    <DescriptionBase name={data.name} translation={data.species} image={data.image} description={data.description} audio={data.audio}/>
   getBirdsDataImage('eagle')
   return (
     <Container className="description">

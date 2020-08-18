@@ -6,7 +6,16 @@ import birdsData from '../../utils/birdsTest';
 import {Context} from '../context/Context';
 
 const OptionList = () => {
-  const {currentLevel, setCurrentNumberOfBird, setScore, score, trueNumberOfBird, setDefaultDescriptionOfBird} = useContext(Context);
+  const {
+    currentLevel, 
+    setCurrentNumberOfBird, 
+    setScore, 
+    score, 
+    trueNumberOfBird, 
+    setDefaultDescriptionOfBird,
+    readyToChangeLevel,
+    setReadyToChangeLevel,
+  } = useContext(Context);
   console.log(trueNumberOfBird)
   const [localScore, setLocalScore] = useState(5);
   const [arrayWithTheSelected, setArrayWithTheSelected] = useState([0,1,2,3,4,5]);
@@ -21,6 +30,9 @@ const OptionList = () => {
             if(localScore >= 0) {
               if (item.id - 1 === trueNumberOfBird) {
                 setScore(localScore + score);
+                setReadyToChangeLevel(true);
+                setLocalScore(5);
+                setArrayWithTheSelected([0,1,2,3,4,5])
               } else if(arrayWithTheSelected.some((elem) => elem === item.id - 1)) {
                 setLocalScore(localScore - 1);
                 setArrayWithTheSelected(arrayWithTheSelected.filter((el) => el !== item.id - 1))

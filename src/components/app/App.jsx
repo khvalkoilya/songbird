@@ -9,7 +9,7 @@ import random from '../../utils/getNumberFrom1To6';
 function App() {
   const [currentLevel, setCurrentLevel] = useState(0);
   const [score, setScore] = useState(0);
-  const [readyToChangeLevel, setReadyToChangeLevel] = useState(true);
+  const [readyToChangeLevel, setReadyToChangeLevel] = useState(false);
   const [currentNumberOfBird, setCurrentNumberOfBird] = useState(0);
   const [trueNumberOfBird, setTrueNumberOfBird] = useState(random());
   const [defaultDescriptionOfBird, setDefaultDescriptionOfBird] = useState(true);

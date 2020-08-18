@@ -6,11 +6,11 @@ import pause from '../../assets/pause.svg';
 import speaker from '../../assets/speaker.svg'
 import mute from '../../assets/mute.svg'
 
-const Player = ({isBig}) => {
+const Player = ({isBig, audioSrc}) => {
   const type = isBig ? 'huge' : 'small'
   return (
     <AudioPlayer
-      src='https://www.xeno-canto.org/sounds/uploaded/XIQVMQVUPP/XC518684-Grands%20corbeaux%2009012020%20Suzon.mp3'
+      src={audioSrc}
       onPlay={e => console.log("onPlay")}
       showJumpControls={false}
       customAdditionalControls={[]}
