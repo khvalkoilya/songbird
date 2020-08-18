@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Container, Row, Col,
 } from 'react-bootstrap';
-import imageDefault from '../../assets/base.jpg';
+import imageDefault from '../../assets/base.png';
 import Player from '../audioPlayer/AudioPlayer';
 
 const CurrentQuestion = () => (
