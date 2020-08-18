@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {
   Container,
 } from 'react-bootstrap';
@@ -18,7 +18,12 @@ const Description = () => {
   const description = defaultDescriptionOfBird ? 
     defaultDescription :
     <DescriptionBase name={data.name} translation={data.species} image={data.image} description={data.description} audio={data.audio}/>
-  getBirdsDataImage('eagle')
+  // getBirdsDataImage('eagle')
+  useEffect(() => {
+    if(!defaultDescriptionOfBird) {
+      document.querySelector('.description-audio > div > audio').pause();
+    }
+  })
   return (
     <Container className="description">
       {description}

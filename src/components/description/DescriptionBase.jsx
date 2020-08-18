@@ -6,6 +6,8 @@ import {
 import Player from '../audioPlayer/AudioPlayer';
 
 const DescriptionBase = ({name, translation, image, description, audio}) => {
+  const audioElement = <Player isBig={false} audioSrc={audio}/>;
+  // audioElement.pause();
   return (
     <Row>
       <Col xs={12} lg={6} xl={5}>
@@ -20,7 +22,7 @@ const DescriptionBase = ({name, translation, image, description, audio}) => {
         <hr />
         <p className="description-translation">{translation}</p>
         <hr />
-        <div className="description-audio"><Player isBig={false} audioSrc={audio}/></div>
+        <div className="description-audio">{audioElement}</div>
       </Col>
       <Col xs={12}>
         <p className="description-text">{description}</p>

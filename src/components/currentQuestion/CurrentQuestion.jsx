@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {
   Container, Row, Col,
 } from 'react-bootstrap';
@@ -11,6 +11,11 @@ const CurrentQuestion = () => {
   const {readyToChangeLevel, trueNumberOfBird, currentLevel} = useContext(Context);
   const defaultName = '******';
   const data = birdsData[currentLevel][trueNumberOfBird];
+  useEffect(() => {
+    if(!readyToChangeLevel) {
+      document.querySelector('audio').pause();
+    }
+  }, [readyToChangeLevel])
   return (
     <Container className="mt-3">
       <Row className="justify-content-between current-block my-3">

@@ -13,6 +13,7 @@ const NextButton = ({
     setCurrentLevel,
     readyToChangeLevel,
     setReadyToChangeLevel,
+    setDefaultDescriptionOfBird,
   } = useContext(Context);
   return (
     <Container className="mb-3">
@@ -20,9 +21,10 @@ const NextButton = ({
         type="button"
         className={`next-button ${readyToChangeLevel ? '' : 'next-button-disabled'}`}
         onClick={() => {
-          if (currentLevel < amountOfLevels) {
+          if (currentLevel + 1< amountOfLevels) {
             setCurrentLevel(currentLevel + 1);
             setReadyToChangeLevel(false);
+            setDefaultDescriptionOfBird(true);
           }
         }}
       >

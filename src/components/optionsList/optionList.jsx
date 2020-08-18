@@ -29,15 +29,16 @@ const OptionList = () => {
             setCurrentNumberOfBird(item.id - 1);
             if(localScore >= 0) {
               if (item.id - 1 === trueNumberOfBird) {
-                setScore(localScore + score);
                 setReadyToChangeLevel(true);
+                setScore(localScore + score);
                 setLocalScore(5);
-                setArrayWithTheSelected([0,1,2,3,4,5])
+                setArrayWithTheSelected([0,1,2,3,4,5]);
               } else if(arrayWithTheSelected.some((elem) => elem === item.id - 1)) {
                 setLocalScore(localScore - 1);
                 setArrayWithTheSelected(arrayWithTheSelected.filter((el) => el !== item.id - 1))
               }
             }
+            // document.querySelector('.description-audio > div > audio').pause();
           }
         }>
           <span className="options-dot" />

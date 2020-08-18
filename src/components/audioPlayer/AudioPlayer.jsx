@@ -11,7 +11,7 @@ const Player = ({isBig, audioSrc}) => {
   return (
     <AudioPlayer
       src={audioSrc}
-      onPlay={e => console.log("onPlay")}
+      autoPlay={false}
       showJumpControls={false}
       customAdditionalControls={[]}
       customIcons={{
