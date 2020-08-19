@@ -30,9 +30,10 @@ function App() {
       setTrueNumberOfBird,
       defaultDescriptionOfBird,
       setDefaultDescriptionOfBird,
+      setIsFinished,
     }}>
       {
-        isFinished ? 
+        !isFinished ? 
           <>
             <Header />
             <CurrentQuestion />
