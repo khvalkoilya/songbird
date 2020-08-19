@@ -4,9 +4,10 @@ import {
   Container,
 } from 'react-bootstrap';
 import {Context} from '../context/Context';
+import random from '../../utils/getNumberFrom1To6';
 
 const NextButton = ({
-  amountOfLevels,
+  amountOfLevels, setIsFinished
 }) => {
   const {
     currentLevel,
@@ -14,6 +15,7 @@ const NextButton = ({
     readyToChangeLevel,
     setReadyToChangeLevel,
     setDefaultDescriptionOfBird,
+    setTrueNumberOfBird,
   } = useContext(Context);
   return (
     <Container className="mb-3">
@@ -21,10 +23,13 @@ const NextButton = ({
         type="button"
         className={`next-button ${readyToChangeLevel ? '' : 'next-button-disabled'}`}
         onClick={() => {
-          if (currentLevel + 1< amountOfLevels) {
+          if (currentLevel + 1 < amountOfLevels) {
             setCurrentLevel(currentLevel + 1);
             setReadyToChangeLevel(false);
             setDefaultDescriptionOfBird(true);
+            setTrueNumberOfBird(random());
+          } else {
+            setIsFinished(true);
           }
         }}
       >
