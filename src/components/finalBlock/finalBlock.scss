@@ -67,6 +67,10 @@
       outline: none;
     }
 
+    &:hover {
+      opacity: 0.9;
+    }
+
     @include media-small {
       width: 200px;
       font-size: 1.3rem;
