@@ -4,6 +4,9 @@ import {
 } from 'react-bootstrap';
 import birdsData from '../../utils/birdsTest';
 import {Context} from '../context/Context';
+import soundPlayer from '../../utils/soundPlayer';
+import error from '../../assets/audios/error.mp3';
+import success from '../../assets/audios/success.mp3';
 
 const OptionList = () => {
   const {
@@ -31,12 +34,14 @@ const OptionList = () => {
               const dot = document.querySelectorAll('.options-dot')[item.id-1];
               if(localScore >= 0 && !readyToChangeLevel) {
                 if (item.id - 1 === trueNumberOfBird) {
+                  soundPlayer(success);
                   setReadyToChangeLevel(true);
                   setScore(localScore + score);
                   setLocalScore(5);
                   setArrayWithTheSelected([0,1,2,3,4,5]);
                   dot.classList.add('options-dot-true')
                 } else if(arrayWithTheSelected.some((elem) => elem === item.id - 1)) {
+                  soundPlayer(error);
                   setLocalScore(localScore - 1);
                   setArrayWithTheSelected(arrayWithTheSelected.filter((el) => el !== item.id - 1));
                   dot.classList.add('options-dot-false')
