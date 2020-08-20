@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import {Context} from '../context/Context';
 import Level from '../level/Level';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/images/logo.png'
 
 const Header = () => {
   const {score} = useContext(Context);

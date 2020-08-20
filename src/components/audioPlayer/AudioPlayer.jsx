@@ -1,10 +1,10 @@
 import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import play from '../../assets/play.svg';
-import pause from '../../assets/pause.svg';
-import speaker from '../../assets/speaker.svg'
-import mute from '../../assets/mute.svg'
+import play from '../../assets/images/play.svg';
+import pause from '../../assets/images/pause.svg';
+import speaker from '../../assets/images/speaker.svg'
+import mute from '../../assets/images/mute.svg'
 
 const Player = ({isBig, audioSrc}) => {
   const type = isBig ? 'huge' : 'small'

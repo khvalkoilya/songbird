@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from 'react';
 import {
   Container, Row, Col,
 } from 'react-bootstrap';
-import imageDefault from '../../assets/base.png';
+import imageDefault from '../../assets/images/base.png';
 import Player from '../audioPlayer/AudioPlayer';
 import {Context} from '../context/Context';
 import birdsData from '../../utils/birdsTest';
