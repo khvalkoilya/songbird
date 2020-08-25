@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import {
   ListGroup,
 } from 'react-bootstrap';
-import birdsData from '../../utils/birdsTest';
+import birdsList from '../../utils/birdsList';
 import Context from '../context/Context';
 import soundPlayer from '../../utils/soundPlayer';
 import error from '../../assets/audios/error.mp3';
@@ -25,7 +25,7 @@ const OptionList = () => {
 
   return (
     <ListGroup variant="flush" className="options">
-      {birdsData[currentLevel].map((item) => (
+      {birdsList[currentLevel].map((item) => (
         <ListGroup.Item
           key={item.id + item.name}
           onClick={
