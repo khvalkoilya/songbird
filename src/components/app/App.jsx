@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import {Context} from '../context/Context';
+import Context from '../context/Context';
 import Header from '../header/Header';
 import CurrentQuestion from '../currentQuestion/CurrentQuestion';
 import GridMenu from '../gridMenu/GridMenu';
 import NextButton from '../nextButton/NextButton';
 import random from '../../utils/getNumberFrom1To6';
-import FinalBlock from '../finalBlock/FinalBlock'
+import FinalBlock from '../finalBlock/FinalBlock';
 
 function App() {
   const [currentLevel, setCurrentLevel] = useState(0);
@@ -31,20 +31,22 @@ function App() {
       defaultDescriptionOfBird,
       setDefaultDescriptionOfBird,
       setIsFinished,
-    }}>
+    }}
+    >
       {
-        !isFinished ? 
-          <>
-            <Header />
-            <CurrentQuestion />
-            <GridMenu />
-            <NextButton
-              amountOfLevels={6}
-              setIsFinished={setIsFinished}
-            />
-          </>
-          :
-          <FinalBlock />
+        !isFinished
+          ? (
+            <>
+              <Header />
+              <CurrentQuestion />
+              <GridMenu />
+              <NextButton
+                amountOfLevels={6}
+                setIsFinished={setIsFinished}
+              />
+            </>
+          )
+          : <FinalBlock />
       }
     </Context.Provider>
   );

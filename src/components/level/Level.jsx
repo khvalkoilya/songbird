@@ -1,20 +1,20 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import {
   Row, Col, Container,
 } from 'react-bootstrap';
-import {Context} from '../context/Context';
+import Context from '../context/Context';
 
 const Level = () => {
   const typesOfBirds = [
     'Разминка',
-    'Воробьиные',
-    'Лесные',
-    'Певчие',
-    'Хищные',
-    'Морские',
+    'Растительноядные',
+    'Насекомоядные',
+    'Хищники',
+    'Падальщики',
+    'Всеядные',
   ];
 
-  const {currentLevel} = useContext(Context);
+  const { currentLevel } = useContext(Context);
 
   return (
     <Container>

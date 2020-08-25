@@ -1,13 +1,13 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import {
   Container,
 } from 'react-bootstrap';
-import {Context} from '../context/Context';
+import Context from '../context/Context';
 import random from '../../utils/getNumberFrom1To6';
 
 const NextButton = ({
-  amountOfLevels, setIsFinished
+  amountOfLevels, setIsFinished,
 }) => {
   const {
     currentLevel,
@@ -36,11 +36,12 @@ const NextButton = ({
         Next level
       </button>
     </Container>
-  )
+  );
 };
 
 NextButton.propTypes = {
   amountOfLevels: PropTypes.number.isRequired,
+  setIsFinished: PropTypes.func.isRequired,
 };
 
 export default NextButton;

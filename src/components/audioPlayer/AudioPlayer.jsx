@@ -1,17 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import play from '../../assets/images/play.svg';
 import pause from '../../assets/images/pause.svg';
-import speaker from '../../assets/images/speaker.svg'
-import mute from '../../assets/images/mute.svg'
+import speaker from '../../assets/images/speaker.svg';
+import mute from '../../assets/images/mute.svg';
 
-const Player = ({isBig, audioSrc}) => {
-  const type = isBig ? 'huge' : 'small'
+const Player = ({ isBig, audioSrc }) => {
+  const type = isBig ? 'huge' : 'small';
   return (
     <AudioPlayer
       src={audioSrc}
       autoPlay={false}
+      onVolumeChange={(e)=>console.log(e.target)}
       showJumpControls={false}
       customAdditionalControls={[]}
       customIcons={{
@@ -21,7 +23,12 @@ const Player = ({isBig, audioSrc}) => {
         volumeMute: <img src={mute} className={`mute-button-${type}`} alt="speaker mute" />,
       }}
     />
-  )
+  );
+};
+
+Player.propTypes = {
+  isBig: PropTypes.bool.isRequired,
+  audioSrc: PropTypes.string.isRequired,
 };
 
 export default Player;

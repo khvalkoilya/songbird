@@ -1,13 +1,13 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import {
   Navbar, Nav, Container,
 } from 'react-bootstrap';
-import {Context} from '../context/Context';
+import Context from '../context/Context';
 import Level from '../level/Level';
-import logo from '../../assets/images/logo.png'
+import logo from '../../assets/images/logo.png';
 
 const Header = () => {
-  const {score} = useContext(Context);
+  const { score } = useContext(Context);
 
   return (
     <Container>
@@ -22,13 +22,16 @@ const Header = () => {
         <Nav>
           <Nav.Item className="nav__score">
             Score:
-            <span> {score}</span>
+            <span>
+              {' '}
+              {score}
+            </span>
           </Nav.Item>
         </Nav>
       </Navbar>
       <Level />
     </Container>
-  )
-}
+  );
+};
 
 export default Header;

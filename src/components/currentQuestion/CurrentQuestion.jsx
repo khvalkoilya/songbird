@@ -1,21 +1,21 @@
-import React, {useContext, useEffect} from 'react';
+import React, { useContext, useEffect } from 'react';
 import {
   Container, Row, Col,
 } from 'react-bootstrap';
 import imageDefault from '../../assets/images/base.png';
 import Player from '../audioPlayer/AudioPlayer';
-import {Context} from '../context/Context';
+import Context from '../context/Context';
 import birdsData from '../../utils/birdsTest';
 
 const CurrentQuestion = () => {
-  const {readyToChangeLevel, trueNumberOfBird, currentLevel} = useContext(Context);
+  const { readyToChangeLevel, trueNumberOfBird, currentLevel } = useContext(Context);
   const defaultName = '******';
   const data = birdsData[currentLevel][trueNumberOfBird];
   useEffect(() => {
-    if(!readyToChangeLevel) {
+    if (!readyToChangeLevel) {
       document.querySelector('audio').pause();
     }
-  }, [readyToChangeLevel])
+  }, [readyToChangeLevel]);
   return (
     <Container className="mt-3">
       <Row className="justify-content-between current-block my-3">
@@ -29,12 +29,11 @@ const CurrentQuestion = () => {
         <Col xs={12} md={8} lg={9} className="my-3">
           <p className="current-name">{readyToChangeLevel ? data.name : defaultName}</p>
           <hr />
-          <Player isBig={true} audioSrc={data.audio}/>
+          <Player isBig={true} audioSrc={data.audio} />
         </Col>
       </Row>
     </Container>
   );
-    
 };
 
 export default CurrentQuestion;
