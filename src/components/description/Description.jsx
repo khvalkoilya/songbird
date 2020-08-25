@@ -20,7 +20,7 @@ const Description = () => {
     : (
       <DescriptionBase
         name={data.name}
-        translation={data.species}
+        translation={data.translation}
         image={data.image}
         description={data.description}
         audio={data.audio}

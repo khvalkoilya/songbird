@@ -19,7 +19,6 @@ const OptionList = () => {
     readyToChangeLevel,
     setReadyToChangeLevel,
   } = useContext(Context);
-  console.log(trueNumberOfBird);
   const [localScore, setLocalScore] = useState(5);
   const [arrayWithTheSelected, setArrayWithTheSelected] = useState([0, 1, 2, 3, 4, 5]);
 

@@ -13,8 +13,9 @@ const CurrentQuestion = () => {
   const data = birdsList[currentLevel][trueNumberOfBird];
   useEffect(() => {
     if (!readyToChangeLevel) {
-      document.querySelector('audio').pause();
+      console.log(`Правильный ответ - ${data.name}`);
     }
+    document.querySelector('audio').pause();
   }, [readyToChangeLevel]);
   return (
     <Container className="mt-3">
@@ -29,7 +30,7 @@ const CurrentQuestion = () => {
         <Col xs={12} md={8} lg={9} className="my-3">
           <p className="current-name">{readyToChangeLevel ? data.name : defaultName}</p>
           <hr />
-          <Player isBig={true} audioSrc={data.audio} />
+          <Player isBig audioSrc={data.audio} />
         </Col>
       </Row>
     </Container>

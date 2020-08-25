@@ -13,7 +13,6 @@ const Player = ({ isBig, audioSrc }) => {
     <AudioPlayer
       src={audioSrc}
       autoPlay={false}
-      onVolumeChange={(e)=>console.log(e.target)}
       showJumpControls={false}
       customAdditionalControls={[]}
       customIcons={{
