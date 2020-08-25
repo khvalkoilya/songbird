@@ -5,12 +5,12 @@ import {
 import imageDefault from '../../assets/images/base.png';
 import Player from '../audioPlayer/AudioPlayer';
 import Context from '../context/Context';
-import birdsData from '../../utils/birdsTest';
+import birdsList from '../../utils/birdsList';
 
 const CurrentQuestion = () => {
   const { readyToChangeLevel, trueNumberOfBird, currentLevel } = useContext(Context);
   const defaultName = '******';
-  const data = birdsData[currentLevel][trueNumberOfBird];
+  const data = birdsList[currentLevel][trueNumberOfBird];
   useEffect(() => {
     if (!readyToChangeLevel) {
       document.querySelector('audio').pause();

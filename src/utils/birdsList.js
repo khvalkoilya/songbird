@@ -78,14 +78,14 @@ const birdsList = [
       name: 'Дрозд',
       translation: 'Turdus',
       image: 'https://live.staticflickr.com/65535/50253713018_d09bf501ba.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/OOECIWCSWV/XC509167-LS104776%20Groundscraper%20Thrush%20song%20A.mp3',
       description: '',
     },{
       id: 5,
       name: 'Чиж',
       translation: 'Carduelis spinus',
       image: 'https://live.staticflickr.com/65535/50193479447_dc21ca30b5.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/TFOGOENSTQ/XC567720-200120_1686%201105%20Zeisige.%20Berlin%2C%20Spandauer%20Forst.%20Stephan%20Risch.mp3',
       description: '',
     },
     {
@@ -94,7 +94,7 @@ const birdsList = [
       species: 'Passer domesticus',
       description: 'Являются самыми известными пернатыми, предпочитающими гнездиться рядом с людьми. Воробьев легко узнать по пестрому оперению и задорному чириканью.',
       image: 'https://live.staticflickr.com//65535//49366595303_06cf65b07e.jpg',
-      audio: 'https://www.xeno-canto.org/sounds/uploaded/CXFHOPIVAS/XC503224-191020_0134.mp3',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/GABAHHYWYR/XC583867-VOC_200818-1045%20House%20Sparrow.mp3',
     },
   ],
   [ // nasekom 3
@@ -103,7 +103,7 @@ const birdsList = [
       name: 'Ласточка',
       translation: 'Hirundo rustica',
       image: 'https://live.staticflickr.com/65535/50266899186_b51c2fe43f.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/SDPCHKOHRH/XC584489-Hirondelle%20rustique%20divers%20cris%20de%20vol%20%2B%2B.mp3',
       description: '',
     },
     {
@@ -111,7 +111,7 @@ const birdsList = [
       name: 'Грач',
       translation: 'Corvus frugilegus',
       image: 'https://live.staticflickr.com/65535/50210170783_39751a9e72.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/YEGMFPTPKL/XC572103-Pipping%20bird%201.mp3',
       description: '',
     },
     {
@@ -119,7 +119,7 @@ const birdsList = [
       name: 'Синица',
       translation: 'Parus',
       image: 'https://live.staticflickr.com/65535/50266770852_a533527136.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/AGCYXCXXSH/XC573597-great%20tit%205%203.mp3',
       description: '',
     },
     {
@@ -127,14 +127,14 @@ const birdsList = [
       name: 'Дятел',
       translation: 'Dendrocopos',
       image: 'https://live.staticflickr.com/65535/50107403761_43950068b2.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/YWRKFXUDUR/XC507990-100%20Woodpecker%20-%20Rufous-bellied%20%28Dendrocopos%20h.%20hyperythrus%29%20Song%20NOV%201728h%202450m%20MtVictoria_GI_1562.mp3',
       description: '',
     },{
       id: 5,
       name: 'Поползень',
       translation: 'Sitta europaea',
       image: 'https://live.staticflickr.com/65535/50267878506_7d03f95baa.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/RVLNPQSYVW/XC572075-2020%2C06.27_7.03%28eurasian%20nuthatch%29.mp3',
       description: '',
     },
     {
@@ -142,7 +142,7 @@ const birdsList = [
       name: 'Зяблик',
       translation: 'Fringilla coelebs',
       image: 'https://live.staticflickr.com/65535/50265775358_e25198cce1.jpg',
-      audio: '',
+      audio: 'https://www.xeno-canto.org/sounds/uploaded/TFJFYTDAWQ/XC581621-Madeira%20Chaffinch%20-%20call%201.mp3',
       description: '',
     },
   ],

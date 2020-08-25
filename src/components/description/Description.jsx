@@ -2,10 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import {
   Container,
 } from 'react-bootstrap';
-import { getBirdsDataImage } from '../getBirdsData/getBirdsData';
 import DescriptionBase from './DescriptionBase';
 import birdsList from '../../utils/birdsList';
-import birdsData from '../../utils/birdsTest';
 import Context from '../context/Context';
 
 const Description = () => {
@@ -28,7 +26,6 @@ const Description = () => {
         audio={data.audio}
       />
     );
-  getBirdsDataImage('Otis tarda')
   useEffect(() => {
     if (!defaultDescriptionOfBird) {
       document.querySelector('.description-audio > div > audio').pause();
