@@ -1,0 +1,45 @@
+.current {
+  &-image {
+    border-radius: 10px;
+    width: 200px;
+    height: 180px;
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+
+    @include media-medium {
+      position: static;
+      margin-left: 0;
+      width: 200px;
+      height: 180px;
+    }
+
+    @include media-large {
+      width: 220px;
+      height: 200px;
+    }
+
+    @include media-extra-large {
+      width: 250px;
+      height: 210px;
+    }
+  }
+
+  &-block {
+    background-color: $blush-color;
+    margin: 0;
+    border-radius: 10px;
+  }
+
+  &-name {
+    color: $white-color;
+    font-size: 1.8rem;
+    text-align: center;
+
+    @include media-medium {
+      text-align: start;
+      margin-left: 0;
+      width: 200px;
+    }
+  }
+}

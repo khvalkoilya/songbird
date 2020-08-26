@@ -1,0 +1,41 @@
+.options {
+  border-radius: 10px;
+
+  &-dot {
+    position: absolute;
+    width: 9px;
+    height: 10px;
+    background-color: $calm-color;
+    top: 22px;
+    border-radius: 50px;
+
+    &-true {
+      background-color: $true-color;
+    }
+  
+    &-false {
+      background-color: $dangerous-color;
+    }
+  }
+
+  &-text {
+    padding-left: 20px;
+
+    @include media-medium {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.options > div {
+  background-color: $blush-color;
+  color: $white-color;
+  font-size: 1rem;
+  outline: none;
+
+  &:hover {
+    background-color: $pink-color;
+    color: $white-color;
+    cursor: pointer;
+  }
+}

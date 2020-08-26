@@ -1,0 +1,28 @@
+.nav__score {
+  color: $white-color;
+  font-size: 1.2rem;
+
+  @include media-small {
+    font-size: 1.3rem;
+  }
+
+  @include media-medium {
+    font-size: 1.6rem;
+  }
+}
+
+.navbar {
+  padding: 0.5rem 0;
+}
+
+.logo {
+  height: 50px;
+
+  @include media-small {
+    height: 70px;
+  }
+
+  @include media-large {
+    height: 90px;
+  }
+}

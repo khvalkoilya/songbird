@@ -1,0 +1,92 @@
+.final-block {
+  background-color: $blush-color;
+  margin-top: 50px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.4rem;
+  color: $white-color;
+
+  @include media-small {
+    margin-top: 100px;
+    font-size: 1.6rem;
+  }
+
+  @include media-medium {
+    font-size: 1.8rem;
+  }
+
+  @include media-large {
+    font-size: 2rem;
+  }
+
+  @include media-extra-large {
+    font-size: 2.2rem;
+  }
+
+  &__gif {
+    border-radius: 10px;
+    width: 200px;
+
+    @include media-small {
+      width: 250px;
+    }
+  
+    @include media-medium {
+      width: 260px;
+    }
+  
+    @include media-large {
+      width: 280px;
+    }
+  
+    @include media-extra-large {
+      width: 300px;
+    }
+  }
+
+  &__bold-text {
+    font-weight: 700;
+  }
+
+  &__button {
+    background-color: $white-color;
+    color: $blush-color;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 5px 0;
+    opacity: 0.8;
+    width: 120px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    @include media-small {
+      width: 200px;
+      font-size: 1.3rem;
+    }
+  
+    @include media-medium {
+      width: 250px;
+      font-size: 1.4rem;
+    }
+  
+    @include media-large {
+      width: 270px;
+    }
+  
+    @include media-extra-large {
+      width: 290px;
+    }
+  }
+}

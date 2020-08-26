@@ -1,0 +1,18 @@
+.level {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  opacity: 0.7;
+  font-size: 1rem;
+  color: $white-color;
+
+  &__container {
+    background-color: $pink-color;
+    border-radius: 10px;
+  }
+
+  &__active {
+    opacity: 1;
+    text-decoration: underline;
+  }
+}

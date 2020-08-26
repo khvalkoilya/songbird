@@ -1,0 +1,122 @@
+$rhap_theme-color: #bd4c4c !default;   // Color of all buttons and volume/progress indicators 
+$rhap_background-color: rgb(65, 58, 58) !default; // Color of the player background 
+$rhap_bar-color: #e4e4e4 !default;     // Color of volume and progress bar 
+$rhap_time-color: rgb(99, 6, 6) !default;
+.rhap_container {
+  background-color: $blush-color!important;
+  box-shadow: none!important;
+  outline: none;
+}
+
+.rhap_container .rhap{
+  &_progress {
+    &-indicator {
+      background-color: $dark-color;
+      box-shadow: none;
+    }
+
+    &-filled {
+      background-color: $pink-color;
+    }
+
+    &-container {
+      outline: none;
+    }
+  }
+
+  &_main-controls-button {
+    outline: none;
+  }
+
+  &_volume {
+    &-button, &-bar-area {
+      outline: none;
+    }
+
+    &-bar {
+      background: $white-color;
+    }
+
+    &-indicator {
+      background: $dark-color;
+    }
+  }
+}
+
+.rhap_container .rhap_time {
+  color: $white-color;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.play-button, .pause-button {
+  &-huge {
+    width: 30px;
+    height: 30px;
+    margin-top: -7px;
+  }
+
+  &-small {
+    width: 20px;
+    height: 20px;
+    margin-top: -7px;
+
+    @include media-small {
+      width: 17px;
+      height: 17px;
+    }
+
+    @include media-medium {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.speaker-button, .mute-button {
+  &-huge {
+    width: 22px;
+    height: 22px;
+    margin-top: -4px;
+  }
+
+  &-small {
+    width: 15px;
+    height: 15px;
+    margin-top: -4px;
+
+    @include media-small {
+      width: 13px;
+      height: 13px;
+    }
+
+    @include media-medium {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+
+
+
+.description-audio > {
+  & .rhap_container  {
+    
+    & .rhap_time {
+      font-size: 15px;
+    }
+
+    & .rhap_stacked {
+      & .rhap_controls-section {
+        margin-top: 0;
+      }
+
+      & .rhap_progress-container > div > div:first-child {
+        width: 15px;
+        height: 15px;
+        top: -5px;
+      }
+    }
+  }
+}

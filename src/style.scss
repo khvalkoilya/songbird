@@ -1,0 +1,19 @@
+@import "./base/constants";
+@import "./base/mixes";
+@import "./components/header/header.scss";
+@import "./components/level/level.scss";
+@import "./components/currentQuestion/currentQuestion.scss";
+@import "./components/optionsList/optionList.scss";
+@import "./components/description/description.scss";
+@import "./components/nextButton/nextButtons.scss";
+@import "./components/audioPlayer/audioPlayer.scss";
+@import "./components/finalBlock/finalBlock.scss";
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $dark-color;
+}
+
+
+
